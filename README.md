@@ -1,34 +1,43 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Blog app
 
-> Description the project.
+> This is a simple blog type app build with Ruby on Rails.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+- Languages: Ruby, SQL.
+- Frameworks: Ruby On Rails.
+- Technologies: Rails, PostgreSQL, npm, rubocop, stylelint, Git.
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- Node
+- NPM
+- Ruby
+- Rails
+- Rubocop
+- Ruby bundler
+- PostgreSQL
 
 ### Setup
-
+Open your terminal and:
+- Clone this repo
+  - run ```cd /path/where/you/want/to clone/```
+  - run ```git clone https://github.com/Trictonicmp/blog-app```
+  - run ```cd blog-app```
+  
 ### Install
+- Install dependencies
+  - run ```bundle install```
+  - run ```npm install```
+- Create database  
+  - run ```rake db:migrate``` or ```rails db:migrate```
 
 ### Usage
 
@@ -40,17 +49,12 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Amaury Permer**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Trictonicmp](https://github.com/Trictonicmp)
+- LinkedIn: [Amaury Permer](https://linkedin.com/in/amaury-permer)
 
-👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
