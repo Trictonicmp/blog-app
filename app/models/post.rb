@@ -2,12 +2,11 @@ class Post < ApplicationRecord
   belongs_to :author, class_name: 'User'
   has_many :comments, class_name: 'Comment'
   has_many :likes, class_name: 'Like'
+  after_save :add_comment_count
 
   def add_post_count
     author.increment!(:post_counter)
   end
-
-  after_save :add_comment_count
 
   def five_recent_comments
     comments.order(created_at: :desc).first(5)

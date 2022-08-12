@@ -1,5 +1,5 @@
 class Like < ApplicationRecord
-  belong_to :author, class_name: 'User'
+  belongs_to :author, class_name: 'User'
   belongs_to :post, class_name: 'Post'
 
   def add_comment_count
