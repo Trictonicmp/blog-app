@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe User, type: :model do
-  user { 
+  subject { 
     User.new(
       name: 'Amaury Elohir Pérez Merino',
       photo: 'www.google.com',
@@ -9,10 +9,10 @@ describe User, type: :model do
     )
   }
 
-  before { user.save }
+  before { subject.save }
 
-  describe 'Name shoild be set' do
-    user.name = nil
-    expect(user).not_to_be_valid
+  it 'Name should be set' do
+    subject.name = nil
+    expect(subject).to_not be_valid
   end
 end
