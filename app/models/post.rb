@@ -13,7 +13,7 @@ class Post < ApplicationRecord
     comments.order(created_at: :desc).first(5)
   end
 
-  validates :title, presence: true, length{ 2...250 }
+  validates :title, presence: true, length: { 2...250 }
   validates :likes_counter, numericality: { only_integer: greater_than_or_equal_to: 0 }
-  validates :comments_counter, numericality { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 end
