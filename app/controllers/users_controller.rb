@@ -5,4 +5,10 @@ class UsersController < ApplicationController
 
   def show
   end
+
+  def posts
+  end
+
+  def show_post
+  end
 end
