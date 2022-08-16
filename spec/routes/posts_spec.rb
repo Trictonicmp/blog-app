@@ -11,7 +11,7 @@ RSpec.describe 'PostsController', type: :request do
     end
 
     it 'should have text' do
-      expect(response.body).to include("Here is the user")
+      expect(response.body).to include('Here is the user')
     end
 
     it 'renders the correct page' do
