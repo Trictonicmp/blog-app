@@ -1,17 +1,5 @@
-Here's a list of users <br>
-
 <section class="page-container">
 <% @users.each do |user| %>
-  <div class="user-card">
-    <div class="profile-pic">
-      <img src="<%= user.photo %>" alt="<%= user.name %>">
-    </div>
-    <div class="info">
-      <h2><%= user.name %></h2>
-      <span>
-        Number of posts: <%= user.post_counter %>
-      </span>
-    </div>
-  </div>
+  <%= render "shared/user_headline", user: user %>
 <% end %>  
 </section>
