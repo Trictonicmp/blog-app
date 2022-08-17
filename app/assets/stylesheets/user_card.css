@@ -29,8 +29,13 @@
   height: 100%;
 }
 
-.user-card h2 {
+.user-card a {
   width: 100%;
+  text-decoration: none;
+  color: #666;
+}
+
+.user-card h2 {
   font-size: 2.5em;
   font-weight: 600;
 }
