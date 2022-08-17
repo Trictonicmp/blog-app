@@ -1,0 +1,4 @@
+.user-card {
+  width: calc(100% - 2em);
+  background-color: red;
+}
