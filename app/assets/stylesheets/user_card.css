@@ -1,0 +1,45 @@
+.user-card {
+  width: 100%;
+  padding: 1em;
+  background-color: #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  border-radius: 0.3em;
+}
+
+.user-card .info {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 10em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.user-card .profile-pic {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  max-height: 9em;
+  display: flex;
+  justify-content: center;
+}
+
+.user-card img {
+  height: 100%;
+}
+
+.user-card a {
+  width: 100%;
+  text-decoration: none;
+  color: #666;
+}
+
+.user-card h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.user-card span {
+  margin-left: auto;
+}

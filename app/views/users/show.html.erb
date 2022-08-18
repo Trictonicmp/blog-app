@@ -1,1 +1,19 @@
-Here is the user <%= params[:id]%> info
+<section class="page-container">
+  <%= render "shared/user_headline", user: @user %>
+  <div class="bio-card">
+    <span>Bio</span>
+    <p>
+      <%= @user.bio %>
+    </p>
+  </div>
+
+  <ul class="posts-list">
+    <% @user.three_most_recent_post.each do |post| %>
+      <%= render "shared/post_card", post: post, user: @user, comments: false %>
+    <% end %>
+  </ul>
+
+  <%= link_to(user_posts_path(user_id: @user.id)) do %>
+    <button type="button" class="see-more">See all posts</button>
+  <% end %>
+</section>

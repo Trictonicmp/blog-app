@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+@import url('reset.css');
+@import url('layout.css');
+@import url('user_card.css');
+@import url('user_page.css');
+@import url('posts_card.css');
+@import url('post-page.css');

@@ -1,1 +1,5 @@
-Here's a list of users
+<section class="page-container">
+<% @users.each do |user| %>
+  <%= render "shared/user_headline", user: user %>
+<% end %>  
+</section>

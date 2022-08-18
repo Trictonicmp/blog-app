@@ -1,0 +1,32 @@
+.bio-card {
+  width: 100%;
+  background-color: #ddd;
+  padding: 1em;
+  border-radius: 0.3em;
+}
+
+.bio-card span {
+  display: block;
+  margin-bottom: 1em;
+  width: 100%;
+  color: #666;
+}
+
+.posts-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.see-more {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0.8em;
+  background-color: #eee;
+  border-radius: 0.3em;
+  border: 1px solid #666;
+}
+
+.see-more:hover {
+  cursor: pointer;
+}

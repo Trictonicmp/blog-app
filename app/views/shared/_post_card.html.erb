@@ -1,0 +1,34 @@
+<li class="post">
+  <span class="title">
+    <%= link_to(user_post_path(user_id: user.id, id: post.id)) do %>
+      <%= post.title %>
+    <% end %>
+  </span>
+  <p>
+    <%= post.text %>
+  </p>
+  <div class="post-details">
+    <span>
+      Comments: <%= post.comments_counter %>
+    </span>
+    <span>
+      Likes: <%= post.likes_counter %>
+    </span>
+  </div>
+  <% if comments %>
+    <ul class="comments-list">
+    <% post.five_recent_comments.each do |comment| %>
+      <li>
+        <h4>
+          <%= link_to(user_path(id: comment.author.id)) do %>
+          <%= comment.author.name %>
+          <% end%>
+        </h4>
+        <p>
+          <%= comment.text %>
+        </p>
+      </li>
+    <% end %>
+    </ul>
+  <% end %>
+</li>
