@@ -1,0 +1,10 @@
+.post-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-header h4 {
+  font-weight: 600;
+  color: rgb(61, 110, 223);
+}
