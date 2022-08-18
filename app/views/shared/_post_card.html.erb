@@ -15,4 +15,20 @@
       Likes: <%= post.likes_counter %>
     </span>
   </div>
+  <% if comments %>
+    <ul class="comments-list">
+    <% post.comments.each do |comment| %>
+      <li>
+        <h4>
+          <%= link_to(user_path(id: comment.author.id)) do %>
+          <%= comment.author.name %>
+          <% end%>
+        </h4>
+        <p>
+          <%= comment.text %>
+        </p>
+      </li>
+    <% end %>
+    </ul>
+  <% end %>
 </li>
