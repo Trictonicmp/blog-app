@@ -1,1 +1,9 @@
-Here is the user <%= params[:id] %> posts list
+<section class="page-container">
+  <%= render "shared/user_headline", user: @user %>
+  <ul class="posts-list">
+    <% @posts.each do |post| %>
+      <%= render "shared/post_card", post: post, user: @user,  comments: true %>
+    <% end %>
+  </ul>
+  <button class="see-more">pagination</button>
+</section
