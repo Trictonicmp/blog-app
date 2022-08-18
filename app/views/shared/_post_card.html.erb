@@ -1,6 +1,8 @@
 <li class="post">
   <span class="title">
-    <%= post.title %>
+    <%= link_to(user_posts_path(user_id: user.id, post: post.id)) do %>
+      <%= post.title %>
+    <% end %>
   </span>
   <p>
     <%= post.text %>
