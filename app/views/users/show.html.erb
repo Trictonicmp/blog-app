@@ -1,1 +1,34 @@
-Here is the user <%= params[:id]%> info
+<section class="page-container">
+  <%= render "shared/user_headline", user: @user %>
+  <div class="bio-card">
+    <span>Bio</span>
+    <p>
+      <%= @user.bio %>
+    </p>
+  </div>
+
+  <ul class="posts-list">
+    <% @user.three_most_recent_post.each do |post| %>
+      <li class="post">
+        <span class="title">
+          <%= post.title %>
+        </span>
+        <p>
+          <%= post.text %>
+        </p>
+        <div class="post-details">
+          <span>
+            Comments: <%= post.comments_counter %>
+          </span>
+          <span>
+            Likes: <%= post.likes_counter %>
+          </span>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to(user_posts_path(user_id: @user.id)) do %>
+    <button type="button" class="see-more">See all posts</button>
+  <% end %>
+</section>
