@@ -1,8 +1,14 @@
 .posts-list .post {
   padding: 1em;
   width: 100%;
-  border-radius: .3em;
+  border-radius: 0.3em;
   outline: 1px solid #ddd;
+}
+
+.comments-list li h4 a {
+  line-height: 2em;
+  text-decoration: none;
+  color: rgb(61, 110, 223);
 }
 
 .posts-list .post .title a {
@@ -28,10 +34,4 @@
 .comments-list li {
   border-top: 1px solid #ddd;
   margin-bottom: 0.8em;
-}
-
-.comments-list li h4 a {
-  line-height: 2em;
-  text-decoration: none;
-  color: rgb(61, 110, 223);
 }
