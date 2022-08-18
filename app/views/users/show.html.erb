@@ -9,7 +9,7 @@
 
   <ul class="posts-list">
     <% @user.three_most_recent_post.each do |post| %>
-      <%= render "shared/post_card", post: post %>
+      <%= render "shared/post_card", post: post, user: @user %>
     <% end %>
   </ul>
 
