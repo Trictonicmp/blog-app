@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   root "users#index"
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show]
+      resources :comments, only: [:add, :new] do
+      resources :likes, only: [:add, :remove]
+    end
   end
   # get'/users/:id', to: 'users#show'
   # get'/users/:id/posts', to: 'posts#index'
