@@ -1,0 +1,38 @@
+.comment-form {
+  width: 100%;
+}
+
+.comment-form form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.comment-form form textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  outline: none;
+  padding: 0.5em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.comment-form form textarea:focus {
+  border: 1px solid rgb(61, 110, 223);
+}
+
+.comment-form form .button {
+  margin-left: auto;
+}
+
+.comment-form .current-user {
+  display: block;
+  font-size: 0.8em;
+  color: #666;
+  margin-bottom: 0.5em;
+}
+
+.comment-form .current-user a {
+  text-decoration: none;
+  color: rgb(61, 110, 223);
+}
