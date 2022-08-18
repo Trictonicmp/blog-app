@@ -1,0 +1,12 @@
+.bio-card {
+  width: 100%;
+  background-color: #ddd;
+  padding: 1em;
+}
+
+.bio-card span {
+  display: block;
+  margin-bottom: 1em;
+  width: 100%;
+  color: #666;
+}
