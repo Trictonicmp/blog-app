@@ -26,10 +26,11 @@
   outline: 1px solid #ddd;
 }
 
-.posts-list .post span {
+.posts-list .post .title a {
   display: block;
-  color: #666;
+  color: rgb(61, 110, 223);
   margin-bottom: 1em;
+  text-decoration: none;
 }
 
 .posts-list .post .post-details {
@@ -37,4 +38,16 @@
   display: flex;
   gap: 1em;
   justify-content: end;
+}
+
+.see-more {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0.8em;
+  background-color: #eee;
+  border-radius: 0.3em;
+  border: 1px solid #666;
+}
+
+.see-more:hover {
+  cursor: pointer;
 }
