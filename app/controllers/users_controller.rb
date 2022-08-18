@@ -3,5 +3,7 @@ class UsersController < ApplicationController
     @users = User.all.order(name: :asc)
   end
 
-  def show; end
+  def show
+    @user = User.find(params['id'])
+  end
 end
