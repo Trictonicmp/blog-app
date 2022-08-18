@@ -5,6 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
+  border-radius: .3em;
 }
 
 .user-card .info {
