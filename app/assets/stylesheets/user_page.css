@@ -19,7 +19,7 @@
   gap: 1em;
 }
 
-.see-more {
+.button {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 0.8em;
   background-color: #eee;
@@ -27,6 +27,6 @@
   border: 1px solid #666;
 }
 
-.see-more:hover {
+.button:hover {
   cursor: pointer;
 }
