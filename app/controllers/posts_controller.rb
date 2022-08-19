@@ -19,13 +19,13 @@ class PostsController < ApplicationController
     permits = params.require(:post).permit(:title, :text)
     text = permits[:text]
     title = permits[:title]
-    @new_post = Post.new(author: current_user, text: text, title: title)
+    @new_post = Post.new(author: current_user, text:, title:)
 
     if @new_post.save
-      flash[:success] = "Post added!"
+      flash[:success] = 'Post added!'
       redirect_to user_path(id: current_user.id)
     else
-      flash.now[error] = "Error, post could not be saved"
+      flash.now[error] = 'Error, post could not be saved'
       render :new
     end
   end

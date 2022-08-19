@@ -3,10 +3,10 @@ class LikesController < ApplicationController
     @current_post = Post.find(params[:post_id])
     @current_post.likes.new(author: current_user)
     if @current_post.save
-      flash[:success] = "Like added!"
-      redirect_to user_path(id: params[:user_id], id: params[:post_id])
+      flash[:success] = 'Like added!'
+      redirect_to user_path(user_id: params[:user_id], id: params[:post_id])
     else
-      flash.now[:error] = "Error: Like could not be added"
+      flash.now[:error] = 'Error: Like could not be added'
       render :new
     end
   end
