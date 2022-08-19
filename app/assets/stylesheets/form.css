@@ -26,14 +26,14 @@
   margin-left: auto;
 }
 
-.comment-form .current-user {
+.form-wrapper .current-user {
   display: block;
   font-size: 0.8em;
   color: #666;
   margin-bottom: 0.5em;
 }
 
-.comment-form .current-user a {
+.form-wrapper .current-user a {
   text-decoration: none;
   color: rgb(61, 110, 223);
 }
