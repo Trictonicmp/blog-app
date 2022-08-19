@@ -26,4 +26,5 @@
   </li>
   <% end %>
 </ul>
+<%= render "shared/comment_form", current_user: @current_user, post_id: @post.id, comment: @post.comments.build %>
 </section>
