@@ -14,8 +14,15 @@
   color: rgb(61, 110, 223);
 }
 
+.posts-list .post .title {
+  flex-shrink: 1;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .posts-list .post .title a {
-  display: block;
   color: rgb(61, 110, 223);
   margin-bottom: 1em;
   text-decoration: none;
@@ -37,4 +44,24 @@
 .comments-list li {
   border-top: 1px solid #ddd;
   margin-bottom: 0.8em;
+}
+
+.like-form {
+  flex-shrink: 1;
+}
+
+.like-form .like-button {
+  width: 4em;
+  background-color: transparent;
+  border: none;
+}
+
+.like-form .like-button img {
+  transition: transform 0.1s ease-out;
+  width: 100%;
+}
+
+.like-form .like-button:hover img {
+  transform: scale(1.2);
+  cursor: pointer;
 }
