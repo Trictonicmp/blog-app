@@ -1,0 +1,18 @@
+<section class="page-container">
+  <h2 class="form-title">
+    Share a new post!
+  </h2>
+  <div class="form-wrapper">
+  <span class="inner-title">
+    New post as 
+    <%= link_to(user_path(id: @current_user.id)) do %>
+      <%= @current_user.name %>
+    <% end %>
+  </span>
+    <%= form_with model: @current_user.posts.build, url: posts_path, method: :post do |form| %>
+    <%= form.text_field :title, placeholder: "Title", class: "form-field" %>
+    <%= form.text_area :text, placeholder: "Comment", class: "form-textarea" %>
+    <%= form.submit "Add post", class: "button" %>
+    <% end %>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+<section class="form-wrapper">
+  <span class="inner-title">
+    Comment as 
+    <%= link_to(user_path(id: current_user.id)) do %>
+      <%= current_user.name %>
+    <% end %>
+  </span>
+  <%= form_with model: comment, url: user_post_comments_path(user_id: current_user.id, post_id: post_id ), method: :post do |form| %>
+    <%= form.text_area :text, placeholder: "Leave a comment", rows: 4, class:"form-textarea" %>
+    <%= form.submit "Post comment", class: "button" %>
+  <% end %>
+</section>

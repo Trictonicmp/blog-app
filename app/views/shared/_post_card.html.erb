@@ -1,8 +1,9 @@
-<li class="post">
+<li class="post white-bg">
   <span class="title">
     <%= link_to(user_post_path(user_id: user.id, id: post.id)) do %>
       <%= post.title %>
     <% end %>
+    <%= render "shared/like_button", post: post, user: user %>
   </span>
   <p>
     <%= post.text %>
@@ -16,6 +17,9 @@
     </span>
   </div>
   <% if comments %>
+  <span class="inner-title">
+      Comments
+  </span>
     <ul class="comments-list">
     <% post.five_recent_comments.each do |comment| %>
       <li>

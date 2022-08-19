@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <%= link_to new_post_path, class: "add-post" do %>
+      <%= image_tag("add.png", alt: "Add post") %>
+      <span>
+        New post
+      </span>
+    <% end %>
     <%= yield %>
   </body>
 </html>

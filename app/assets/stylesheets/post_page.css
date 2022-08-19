@@ -1,0 +1,26 @@
+.post-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-header h4 {
+  font-weight: 600;
+  color: rgb(61, 110, 223);
+}
+
+.post-inner-title {
+  margin-top: 2em;
+  margin-bottom: -2em;
+}
+
+.post-text {
+  display: block;
+  width: 100%;
+}
+
+.post-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

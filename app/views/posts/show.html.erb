@@ -10,8 +10,13 @@
     </span>
   </div>
 </div>
-<%= @post.text %>
-
+<p class="post-text">
+  <%= @post.text %>
+</p>
+<div class="post-buttons">
+  <%= render "shared/like_button", post: @post, user: @current_user %>
+</div>
+<span class="post-inner-title inner-title">Comments</span>
 <ul class="comments-list">
   <% @post.comments.each do |comment| %>
   <li>
@@ -26,4 +31,5 @@
   </li>
   <% end %>
 </ul>
+<%= render "shared/comment_form", current_user: @current_user, post_id: @post.id, comment: @post.comments.build %>
 </section>

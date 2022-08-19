@@ -3,7 +3,7 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
 
-  after_save :add_post_count
+  after_create :add_post_count
 
   def add_post_count
     author.increment!(:post_counter)
