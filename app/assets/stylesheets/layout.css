@@ -9,3 +9,31 @@
   gap: 1em;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.add-post {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  right: 0;
+  bottom: 10em;
+  transform: translateX(5.1em);
+
+  background-color: rgb(61, 110, 223);
+  padding: 1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  color: white;
+  border-top-left-radius: 2em;
+  border-bottom-left-radius: 2em;
+  transition: transform 0.1s ease-out;
+}
+
+.add-post:hover {
+  transform: translateX(0);
+}
+
+.add-post img {
+  width: 100%;
+  max-width: 2em;
+}
