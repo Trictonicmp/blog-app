@@ -2,7 +2,10 @@
   padding: 1em;
   width: 100%;
   border-radius: 0.3em;
-  outline: 1px solid #ddd;
+}
+
+.posts-list .post:hover {
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
 }
 
 .comments-list li h4 a {

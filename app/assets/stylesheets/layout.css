@@ -1,3 +1,7 @@
+body {
+  background-color: #f2f2f2;
+}
+
 .page-container {
   width: 100%;
   padding: 1em;
@@ -8,6 +12,10 @@
   justify-content: center;
   gap: 1em;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.white-bg {
+  background-color: white;
 }
 
 .add-post {
@@ -36,4 +44,22 @@
 .add-post img {
   width: 100%;
   max-width: 2em;
+}
+
+.button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 0.8em;
+  background-color: rgb(61, 110, 223);
+  border-radius: 0.3em;
+  border: 1px solid rgb(61, 110, 223);
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: rgb(73, 125, 247);
+}
+
+.button:active {
+  background-color: rgb(47, 98, 217);
 }
