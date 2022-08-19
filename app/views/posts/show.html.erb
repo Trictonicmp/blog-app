@@ -10,7 +10,9 @@
     </span>
   </div>
 </div>
-<%= @post.text %>
+<p class="post-text">
+  <%= @post.text %>
+</p>
 <span class="post-inner-title inner-title">Comments</span>
 <ul class="comments-list">
   <% @post.comments.each do |comment| %>

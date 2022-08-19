@@ -13,3 +13,8 @@
   margin-top: 2em;
   margin-bottom: -2em;
 }
+
+.post-text {
+  display: block;
+  width: 100%;
+}
