@@ -1,0 +1,5 @@
+<%= form_with url: user_post_likes_path(post_id: post.id, user_id: user.id), method: :post, class: "like-form" do |form| %>
+  <%= button_tag class: "like-button" do %>
+    <%= image_tag("like.png", alt: "Like") %>
+  <% end %>
+<% end %>
