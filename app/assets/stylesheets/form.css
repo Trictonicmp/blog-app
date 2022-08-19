@@ -49,3 +49,8 @@ input:focus {
   text-decoration: none;
   color: rgb(61, 110, 223);
 }
+
+.form-title {
+  color: rgb(61, 110, 223);
+  font-weight: 600;
+}
