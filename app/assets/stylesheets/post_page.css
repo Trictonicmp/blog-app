@@ -18,3 +18,9 @@
   display: block;
   width: 100%;
 }
+
+.post-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
