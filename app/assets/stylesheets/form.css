@@ -38,14 +38,14 @@ input:focus {
   margin-left: auto;
 }
 
-.form-wrapper .current-user {
+.inner-title {
   display: block;
   font-size: 0.8em;
   color: #666;
   margin-bottom: 0.5em;
 }
 
-.form-wrapper .current-user a {
+.inner-title a {
   text-decoration: none;
   color: rgb(61, 110, 223);
 }
