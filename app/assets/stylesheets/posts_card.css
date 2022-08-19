@@ -52,8 +52,8 @@
 
 .like-form .like-button {
   width: 4em;
-  background-color: white;
   border: none;
+  background-color: transparent;
 }
 
 .like-form .like-button img {
