@@ -18,7 +18,7 @@
 </div>
 <span class="post-inner-title inner-title">Comments</span>
 <ul class="comments-list">
-  <% @post.comments.each do |comment| %>
+  <% @post.comments.includes(:author).each do |comment| %>
   <li>
     <h4>
       <%= link_to(user_path(id: comment.author.id)) do %>
