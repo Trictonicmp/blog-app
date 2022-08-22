@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe User, type: :model do
+RSpec.describe User, type: :model do
   let(:author) do
     User.new(
       name: 'Amaury Elohir Pérez Merino',
