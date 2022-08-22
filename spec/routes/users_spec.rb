@@ -11,7 +11,7 @@ RSpec.describe UsersController, type: :request do
     end
 
     it 'should have text' do
-      expect(response.body).to include("Here's a list of users")
+      expect(response.body).to include('Josh')
     end
 
     it 'renders the correct page (index)' do
@@ -21,7 +21,7 @@ RSpec.describe UsersController, type: :request do
 
   describe 'GET /users/:id' do
     before do
-      get user_path(id: 20)
+      get user_path(id: 136)
     end
 
     it 'returns an (OK) HTTP status' do
@@ -29,7 +29,7 @@ RSpec.describe UsersController, type: :request do
     end
 
     it 'should have text' do
-      expect(response.body).to include('Here is the user 20')
+      expect(response.body).to include('Bio')
     end
 
     it 'renders the correct page (show)' do
