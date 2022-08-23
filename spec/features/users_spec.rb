@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Homepage', type: :system do
+RSpec.describe 'Users', type: :system do
   it 'shows the username' do
     visit('http://localhost:3000/users/136')
     expect(page).to have_content('Lilly')
