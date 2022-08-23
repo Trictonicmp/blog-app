@@ -17,13 +17,13 @@ RSpec.describe 'Homepage', type: :system do
 
   it 'shows numbers of posts of each user' do
     visit('http://localhost:3000/')
-    expect(page).to have_content('Number of posts: 0')
     expect(page).to have_content('Number of posts: 4')
-    expect(page).to have_content('Number of posts: 9')
+    expect(page).to have_content('Number of posts: 0')
+    expect(page).to have_content('Number of posts: 5')
   end
 
   it 'redirects to the user/show page' do
     visit('http://localhost:3000/')
-    expect(page).to have_link('Lilly', href: '/users/136')
+    expect(page).to have_link('Lilly', href: '/users/1')
   end
 end
