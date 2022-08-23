@@ -65,11 +65,11 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
-  
-  Capybara.configure do |config|
-    config.run_server = false
+
+  Capybara.configure do |configuration|
+    configuration.run_server = false
   end
-  session = Capybara::Session.new(:selenium)
+  # session = Capybara::Session.new(:selenium)
 
   config.before(:each) do
     DatabaseCleaner.clean_with(:truncation)
@@ -83,5 +83,4 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
-
 end

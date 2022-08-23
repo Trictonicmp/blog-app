@@ -13,7 +13,7 @@ RSpec.describe UsersController, type: :request do
     end
 
     it 'should have text' do
-      expect(response.body).to include("Amaury")
+      expect(response.body).to include('Amaury')
     end
 
     it 'renders the correct page (index)' do
