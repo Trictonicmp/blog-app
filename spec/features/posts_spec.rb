@@ -50,6 +50,7 @@ RSpec.describe 'Posts', type: :system do
 
   it 'redirects to the user/post/show page when clicking on a post' do
     visit('http://localhost:3000/users/1/posts')
-    expect(page).to have_link('My forth post', href: '/users/1/posts/9')
+    click_on('My forth post')
+    expect(page).to have_current_path(user_post_path(user_id: 1, id: 9))
   end
 end
