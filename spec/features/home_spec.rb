@@ -24,6 +24,7 @@ RSpec.describe 'Homepage', type: :system do
 
   it 'redirects to the user/show page' do
     visit('http://localhost:3000/')
-    expect(page).to have_link('Lilly', href: '/users/1')
+    click_on('Lilly')
+    expect(page).to have_current_path(user_path(id: 1))
   end
 end
