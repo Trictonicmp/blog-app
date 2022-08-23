@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 # --------------------- users ---------------------
-lilly = User.create(name: ' lilly', photo: 'https://t4.ftcdn.net/jpg/03/30/25/97/360_F_330259751_tGPEAq5F5bjxkkliGrb97X2HhtXBDc9x.jpg', bio: 'Teacher from Poland.
+lilly = User.create(name: ' Lilly', photo: 'https://t4.ftcdn.net/jpg/03/30/25/97/360_F_330259751_tGPEAq5F5bjxkkliGrb97X2HhtXBDc9x.jpg', bio: 'Teacher from Poland.
 Passionated about surfing and traveling around the world, I can say that "Travel" is my second name!')
 tom = User.create(name: 'Tom', photo: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', bio: 'Vet. medic from Colombia and software developer
 Switching career has been the most exciting thing I\'ve ever done and the most rewarding too, glad to be here with lots of friends from all around the world.')
