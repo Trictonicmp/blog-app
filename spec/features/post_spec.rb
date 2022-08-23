@@ -5,7 +5,7 @@ RSpec.describe 'Post', type: :system do
     visit('http://localhost:3000/users/136/posts/140')
     expect(page).to have_content('My forth post')
   end
-  
+
   it 'displays who wrote the post' do
     visit('http://localhost:3000/users/136/posts/140')
     expect(page).to have_content('Lilly')
