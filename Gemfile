@@ -57,6 +57,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'bullet'
   gem 'database_cleaner'
+  gem 'capybara'
+  gem 'webdrivers'
+  gem 'selenium-webdriver'
 end
 
 group :development do
