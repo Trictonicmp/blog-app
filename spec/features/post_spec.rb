@@ -11,7 +11,10 @@ RSpec.describe 'Post', type: :system do
     expect(page).to have_content('Lilly')
   end
 
-  it 'shows how many comments the post has'
+  it 'shows how many comments the post has' do
+    visit('http://localhost:3000/users/136/posts/140')
+    expect(page).to have_content('Comments: 11')
+  end
 
   it 'shows how many likes the post has'
 
