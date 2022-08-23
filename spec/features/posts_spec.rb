@@ -40,7 +40,7 @@ RSpec.describe 'Posts', type: :system do
     expect(page).to have_content('Comments: 11')
   end
   
-  it 'shows the number of comments of a post' do
+  it 'shows the number of likes of a post' do
     visit('http://localhost:3000/users/136/posts')
     expect(page).to have_content('Likes: 2')
   end
@@ -51,7 +51,7 @@ RSpec.describe 'Posts', type: :system do
   end
 
   it 'redirects to the user/post/show page when clicking on a post' do
-    visit('http://localhost:3000/users/136')
+    visit('http://localhost:3000/users/136/posts')
     expect(page).to have_link('My forth post', href: '/users/136/posts/140')
   end
 end
