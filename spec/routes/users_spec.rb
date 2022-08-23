@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.describe UsersController, type: :request do
   describe 'GET /users' do
     before do
-      get users_path(id: 20)
+      user = User.new(name: 'Amaury', bio: 'Web-dev', photo: 'google.com')
+      user.save
+      get users_path(id: 1)
     end
 
     it 'returns an (OK) HTTP status' do
@@ -11,7 +13,7 @@ RSpec.describe UsersController, type: :request do
     end
 
     it 'should have text' do
-      expect(response.body).to include('Josh')
+      expect(response.body).to include("Amaury")
     end
 
     it 'renders the correct page (index)' do
@@ -21,7 +23,10 @@ RSpec.describe UsersController, type: :request do
 
   describe 'GET /users/:id' do
     before do
-      get user_path(id: 136)
+      user = User.new(name: 'Amaury', bio: 'Web-dev', photo: 'google.com')
+      user.save
+
+      get user_path(id: user.id)
     end
 
     it 'returns an (OK) HTTP status' do
@@ -29,7 +34,7 @@ RSpec.describe UsersController, type: :request do
     end
 
     it 'should have text' do
-      expect(response.body).to include('Bio')
+      expect(response.body).to include('Web-dev')
     end
 
     it 'renders the correct page (show)' do
