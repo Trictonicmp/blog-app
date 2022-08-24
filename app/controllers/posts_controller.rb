@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def show
     @current_user = current_user
     @comment = Comment.new
-    @post = Post.where(author_id: params[:user_id]).find(params[:id])
+    @post = Post.includes(:author).find(params[:id])
   end
 
   def new

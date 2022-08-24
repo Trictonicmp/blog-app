@@ -10,7 +10,7 @@ class Post < ApplicationRecord
   end
 
   def five_recent_comments
-    comments.order(created_at: :desc).first(5)
+    comments.includes(:author).order(created_at: :desc).first(5)
   end
 
   validates :title, presence: true, length: { in: 2...250 }

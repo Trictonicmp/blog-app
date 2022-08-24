@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Post, type: :model do
+RSpec.describe Post, type: :model do
   let(:author) { User.create!(name: 'amaury', photo: 'www.google.com', bio: 'magician') }
   let(:post) { Post.create!(author:, title: 'hello', text: 'hello2') }
 

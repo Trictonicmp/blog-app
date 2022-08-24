@@ -3,7 +3,11 @@ require 'rails_helper'
 RSpec.describe 'PostsController', type: :request do
   describe 'GET /users/id/posts' do
     before do
-      get user_posts_path(user_id: 20)
+      user = User.new(name: 'Amaury', bio: 'Web-dev', photo: 'google.com')
+      user.save
+      post = Post.new(author: user, title: 'hello', text: 'post no1')
+      post.save
+      get user_posts_path(user_id: user.id)
     end
 
     it 'returns an (OK) HTTP status' do
@@ -11,7 +15,7 @@ RSpec.describe 'PostsController', type: :request do
     end
 
     it 'should have text' do
-      expect(response.body).to include('Here is the user')
+      expect(response.body).to include('Amaury')
     end
 
     it 'renders the correct page' do
@@ -21,7 +25,12 @@ RSpec.describe 'PostsController', type: :request do
 
   describe 'GET /users/id/posts/id' do
     before do
-      get user_post_path(user_id: 20, id: 5)
+      user = User.new(name: 'Amaury', bio: 'Web-dev', photo: 'google.com')
+      user.save
+      post = Post.new(author: user, title: 'hello', text: 'post no1')
+      post.save
+
+      get user_post_path(user_id: user.id, id: post.id)
     end
 
     it 'returns an (OK) HTTP status' do
@@ -29,7 +38,7 @@ RSpec.describe 'PostsController', type: :request do
     end
 
     it 'should have text' do
-      expect(response.body).to include('here is the user')
+      expect(response.body).to include('hello')
     end
 
     it 'renders the correct page' do
