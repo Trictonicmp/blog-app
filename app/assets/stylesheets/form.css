@@ -52,4 +52,49 @@ input:focus {
 .form-title {
   color: rgb(61, 110, 223);
   font-weight: 600;
+  text-align: center;
+}
+
+.new_user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+}
+
+.new_user .field {
+  margin-top: 1em;
+  width: 100%;
+  max-width: 15em;
+}
+
+.new_user .field em {
+  font-size: 0.8em;
+  color: darkred;
+}
+
+.field label {
+  color: #888;
+}
+
+.field input {
+  width: 100%;
+  padding: 0.8em;
+}
+
+.actions input[type=submit] {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+}
+
+.remember {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.remember input[type=checkbox] {
+  width: auto;
+  flex-shrink: 1;
 }
