@@ -7,6 +7,12 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: 'author_id'
   has_many :likes, foreign_key: 'author_id'
 
+  Roles = [:admin, :user]
+
+  def is?(role)
+    self.role == role.to_s
+  end
+
   def three_most_recent_post
     posts.order(created_at: :desc).first(3)
   end
