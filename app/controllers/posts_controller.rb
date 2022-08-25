@@ -34,9 +34,8 @@ class PostsController < ApplicationController
     @current_post = Post.find(params[:id])
     Comment.where(post: @current_post).delete_all
     Like.where(post: @current_post).delete_all
-    if @current_post.destroy
-      flash[:success] = 'Post deleted'
-      redirect_to user_path(id: current_user.id)
-    end
+    @current_post.destroy
+    flash[:success] = 'Post deleted'
+    redirect_to user_path(id: current_user.id)
   end
 end
