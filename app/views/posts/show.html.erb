@@ -10,6 +10,9 @@
     </span>
   </div>
 </div>
+<div class="post-options">
+    <%= button_to("Delete post", user_post_path(user_id: @current_user.id, id: @post.id), method: :delete) %>
+</div>
 <p class="post-text">
   <%= @post.text %>
 </p>

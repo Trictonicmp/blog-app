@@ -4,9 +4,14 @@ class Post < ApplicationRecord
   has_many :likes
 
   after_create :add_post_count
+  after_destroy :reduce_post_count
 
   def add_post_count
     author.increment!(:post_counter)
+  end
+
+  def reduce_post_count
+    author.decrement!(:post_counter)
   end
 
   def five_recent_comments

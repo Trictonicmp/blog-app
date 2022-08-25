@@ -8,6 +8,9 @@
   <p>
     <%= post.text %>
   </p>
+  <div class="post-options">
+      <%= button_to("Delete post", user_post_path(user_id: user.id, id: post.id), method: :delete) %>
+  </div>
   <div class="post-details">
     <span>
       Comments: <%= post.comments_counter %>
