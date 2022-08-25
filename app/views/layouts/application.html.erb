@@ -11,12 +11,17 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <%= button_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false } %>
+    <% end %>
     <%= link_to new_post_path, class: "add-post" do %>
       <%= image_tag("add.png", alt: "Add post") %>
       <span>
         New post
       </span>
     <% end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
