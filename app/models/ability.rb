@@ -15,6 +15,10 @@ class Ability
       can :destroy, Post do |post|
         post.author == user
       end
+
+      can :destroy, Comment do |comment|
+        comment.author == user
+      end
     end
     # Define abilities for the user here. For example:
     #

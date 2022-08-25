@@ -19,4 +19,18 @@ class CommentsController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    puts "DELETED"
+    @comment = Comment.find(params[:id])
+    if @comment.destroy
+      puts "DELETED"
+      flash[:success] = 'Comment deleted'
+      redirect_to request.referrer
+    else
+      puts "NOT DELETED"
+      flash.now[:error] = 'Error: Comment could not be deleted'
+      render :new
+    end
+  end
 end
