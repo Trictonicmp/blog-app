@@ -8,6 +8,11 @@
   <p>
     <%= post.text %>
   </p>
+  <div class="post-options">
+      <% if can? :destroy, post %>
+      <%= button_to("Delete post", user_post_path(user_id: user.id, id: post.id), method: :delete) %>
+      <% end %>
+  </div>
   <div class="post-details">
     <span>
       Comments: <%= post.comments_counter %>
@@ -27,6 +32,9 @@
           <%= link_to(user_path(id: comment.author.id)) do %>
           <%= comment.author.name %>
           <% end%>
+          <% if can? :destroy, comment %>
+            <%= button_to 'Delete', user_post_comment_path(user_id: comment.author.id, post_id: post.id, id: comment.id), method: :delete %>
+          <% end %>
         </h4>
         <p>
           <%= comment.text %>
