@@ -45,6 +45,7 @@ gem 'tzinfo-data'
 gem 'bootsnap', require: false
 gem 'cancancan'
 gem 'devise'
+gem 'active_model_serializers'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
