@@ -42,12 +42,12 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'tzinfo-data'
 
 # Reduces boot times through caching; required in config/boot.rb
+gem 'active_model_serializers'
 gem 'bootsnap', require: false
 gem 'cancancan'
 gem 'devise'
 gem 'devise-jwt'
 gem 'rack-cors'
-gem 'active_model_serializers'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -60,11 +60,11 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'dotenv-rails'
   gem 'ffi'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-  gem 'dotenv-rails'
 end
 
 group :development do
