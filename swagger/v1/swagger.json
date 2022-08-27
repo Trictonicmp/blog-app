@@ -1,0 +1,38 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/v1/users/{user_id}/posts": {
+      "parameters": [
+        {
+          "name": "user_id",
+          "in": "path",
+          "type": "string",
+          "description": "user_id",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "list posts",
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://{defaultHost}",
+      "variables": {
+        "defaultHost": {
+          "default": "localhost:3000"
+        }
+      }
+    }
+  ]
+}

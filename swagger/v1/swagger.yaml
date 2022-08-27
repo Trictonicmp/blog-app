@@ -1,17 +1,66 @@
 ---
-openapi: 3.0.1
+swagger: '2.0'
 info:
   title: API V1
   version: v1
 paths:
+  "/api/v1/users/{user_id}/posts/{post_id}/comments":
+    parameters:
+    - name: user_id
+      in: path
+      type: string
+      description: user_id
+      required: true
+    - name: post_id
+      in: path
+      type: string
+      description: post_id
+      required: true
+    - name: Authorization
+      in: header
+      type: string
+      description: token
+    get:
+      summary: list comments
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create comment
+      parameters:
+      - name: comment
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            comment:
+              type: object
+              properties:
+                text:
+                  type: string
+                post_id:
+                  type: integer
+                author_id:
+                  type: integer
+              required:
+              - text
+              - post_id
+              - author_id
+      responses:
+        '200':
+          description: successful
   "/api/v1/users/{user_id}/posts":
     parameters:
     - name: user_id
       in: path
+      type: string
       description: user_id
       required: true
-      schema:
-        type: string
+    - name: Authorization
+      in: header
+      type: string
+      description: token
     get:
       summary: list posts
       responses:
@@ -22,3 +71,9 @@ servers:
   variables:
     defaultHost:
       default: localhost:3000
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
