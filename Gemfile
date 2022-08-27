@@ -45,6 +45,8 @@ gem 'tzinfo-data'
 gem 'bootsnap', require: false
 gem 'cancancan'
 gem 'devise'
+gem 'devise-jwt'
+gem 'rack-cors'
 gem 'active_model_serializers'
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -62,6 +64,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'dotenv-rails'
 end
 
 group :development do

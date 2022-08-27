@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+                session: 'users/session',
+              }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -17,7 +19,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users do
         resources :posts, only: [:index] do
-          resources :comments, only: [:index]
+          resources :comments
         end
       end
     end
